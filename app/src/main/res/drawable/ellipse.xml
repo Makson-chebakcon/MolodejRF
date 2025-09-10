@@ -3,7 +3,20 @@
     android:height="150dp"
     android:viewportWidth="150"
     android:viewportHeight="150">
+
+
+  <!-- Средняя тень -->
   <path
-      android:pathData="M75,139C112,139 142,109 142,72C142,35 112,5 75,5C38,5 8,35 8,72C8,109 38,139 75,139Z"
-      android:fillColor="#ffffff"/>
+      android:fillColor="#11000000"
+      android:pathData="M75,142C114,142 146,110 146,72C146,34 114,2 75,2C36,2 4,34 4,72C4,110 36,142 75,142Z"/>
+
+  <!-- Внутренняя тень -->
+  <path
+      android:fillColor="#33000000"
+      android:pathData="M75,140C112,140 144,108 144,72C144,36 112,4 75,4C38,4 6,36 6,72C6,108 38,140 75,140Z"/>
+
+  <!-- Основная фигура (белый эллипс) -->
+  <path
+      android:fillColor="#FFFFFFFF"
+      android:pathData="M75,139C112,139 142,109 142,72C142,35 112,5 75,5C38,5 8,35 8,72C8,109 38,139 75,139Z"/>
 </vector>
