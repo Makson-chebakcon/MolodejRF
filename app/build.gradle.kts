@@ -40,6 +40,7 @@ dependencies {
 
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
+    implementation(libs.androidx.cardview)
     kapt(libs.room.compiler)
 
     implementation(libs.androidx.core.ktx)
