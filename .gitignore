@@ -1,15 +1,44 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Local configuration file (sdk path, etc)
 local.properties
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Kotlin/Java compile output
+/out/
+
+# Log files
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Crashlytics
+crashlytics.properties
+crashlytics-build.properties
+
+# Google Services (optional - если ключи в JSON)
+google-services.json
+fabric.properties
+
+# Signing key
+*.jks
+*.keystore
+
+# Android Studio Navigation Editor temp files
+.navigation/
+
+# Unit test coverage
+*.ec
+
+# Other
+.cxx/
