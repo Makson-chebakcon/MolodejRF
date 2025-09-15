@@ -27,6 +27,10 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -42,6 +46,9 @@ dependencies {
     implementation(libs.room.ktx)
     implementation(libs.androidx.cardview)
     kapt(libs.room.compiler)
+
+    implementation("io.coil-kt:coil:2.5.0")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

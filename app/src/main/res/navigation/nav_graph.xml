@@ -9,5 +9,35 @@
         android:id="@+id/startFirstScreenFragment"
         android:name="com.example.molodejrf.presentation.frgment.start.StartFirstScreenFragment"
         android:label="fragment_start_first_screen"
-        tools:layout="@layout/fragment_start_first_screen" />
+        tools:layout="@layout/fragment_start_first_screen" >
+        <action
+            android:id="@+id/action_startFirstScreenFragment_to_startEmailAuthFragment"
+            app:destination="@id/startEmailAuthFragment" />
+        <action
+            android:id="@+id/action_startFirstScreenFragment_to_startRegistrationFragment4"
+            app:destination="@id/startRegistrationFragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/startEmailAuthFragment"
+        android:name="com.example.molodejrf.presentation.frgment.start.StartEmailAuthFragment"
+        android:label="fragment_start_email_auth"
+        tools:layout="@layout/fragment_start_email_auth" >
+        <action
+            android:id="@+id/action_startEmailAuthFragment_to_startFragmentAuth3"
+            app:destination="@id/startFragmentAuth3" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragmentAuth3"
+        android:name="com.example.molodejrf.presentation.frgment.start.StartFragmentAuth"
+        android:label="StartFragmentAuth"
+        tools:layout="@layout/fragment_start_auth"/>
+    <fragment
+        android:id="@+id/startRegistrationFragment4"
+        android:name="com.example.molodejrf.presentation.frgment.start.StartRegistrationFragment"
+        android:label="StartRegistrationFragment"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_startRegistrationFragment4_to_startEmailAuthFragment"
+            app:destination="@id/startEmailAuthFragment" />
+    </fragment>
 </navigation>
