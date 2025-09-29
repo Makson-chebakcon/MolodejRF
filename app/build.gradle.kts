@@ -45,6 +45,8 @@ dependencies {
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     implementation(libs.androidx.cardview)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.fragment)
     kapt(libs.room.compiler)
 
     implementation("io.coil-kt:coil:2.5.0")

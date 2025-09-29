@@ -5,16 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.molodejrf.R
 import com.example.molodejrf.data.model.Friend
 import coil.load
 
 class FriendAdapter(
+    private val items: MutableList<Friend>,
     private val onItemClick: (Friend) -> Unit
-) : ListAdapter<Friend, FriendAdapter.FriendViewHolder>(DiffCallback()) {
+) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FriendViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -22,30 +21,25 @@ class FriendAdapter(
         return FriendViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: FriendViewHolder, position: Int) {
-        holder.bind(getItem(position))
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val item = items[position]
+        if (holder is FriendViewHolder) {
+            holder.bind(item)
+        }
     }
 
+    override fun getItemCount(): Int = items.size
+
     inner class FriendViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val nameText = itemView.findViewById<TextView>(R.id.textView8)
-        private val avatarImage = itemView.findViewById<ImageView>(R.id.imageView2)
+        private val nameText = itemView.findViewById<TextView>(R.id.name_item_friends)
+        private val avatarImage = itemView.findViewById<ImageView>(R.id.avatar_item_friends)
 
         fun bind(friend: Friend) {
-            nameText.text = friend.name
-
-            avatarImage.load(friend.avatar)
-
+            nameText.text = friend.firstName
+            avatarImage.load(friend.avatarBase64)
             itemView.setOnClickListener {
                 onItemClick(friend)
             }
         }
-    }
-
-    class DiffCallback : DiffUtil.ItemCallback<Friend>() {
-        override fun areItemsTheSame(oldItem: Friend, newItem: Friend): Boolean =
-            oldItem.id == newItem.id
-
-        override fun areContentsTheSame(oldItem: Friend, newItem: Friend): Boolean =
-            oldItem == newItem
     }
 }

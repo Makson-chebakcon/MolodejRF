@@ -1,4 +1,4 @@
-package com.example.molodejrf.presentation.frgment.start
+package com.example.molodejrf.presentation.fragment.start
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
