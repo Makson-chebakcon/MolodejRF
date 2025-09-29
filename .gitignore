@@ -12,6 +12,17 @@ local.properties
 *.ipr
 *.iws
 
+
+.idea/
+*.iml
+
+/build/
+*/build/
+**/build/
+
+.gradle/
+generated/
+
 # Kotlin/Java compile output
 /out/
 

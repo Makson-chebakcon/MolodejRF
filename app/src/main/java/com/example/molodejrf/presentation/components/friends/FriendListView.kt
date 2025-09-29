@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.molodejrf.data.api.Friend
+import com.example.molodejrf.data.model.Friend
 import com.example.molodejrf.databinding.ComponentFriendsMainSreenBinding
 
 
