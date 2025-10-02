@@ -2,4 +2,16 @@
     <string name="app_name">MolodejRF</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="inf_text">
+        <item>Какой-то текст</item>
+        <item>Ты попалв среду, где ты можешь знакомиться с другими студентами, делиться достижениями и расти профессионально</item>
+        <item>Какой-то текст</item>
+        <item>Впереди все самое интересное, скорее жми кнопку ниже</item>
+    </string-array>
+    <string-array name="inf_heading">
+        <item>Какой-то текст</item>
+        <item>Привет</item>
+        <item>Какой-то текст</item>
+        <item>Готов?</item>
+    </string-array>
 </resources>

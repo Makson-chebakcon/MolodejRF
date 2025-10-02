@@ -4,12 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.molodejrf.R
 
 class StarInformationFragment : Fragment() {
     private lateinit var dots: List<View>
+    private lateinit var infText: Array<String>
+    private lateinit var infHeading: Array<String>
+    private lateinit var tvHeading: TextView
+    private lateinit var tvContent: TextView
     private val activeDot = R.drawable.dot_active
     private val inactiveDot = R.drawable.dot_inactive
 
@@ -31,8 +36,11 @@ class StarInformationFragment : Fragment() {
             view.findViewById(R.id.dot3),
             view.findViewById(R.id.dot4)
         )
-
-        setActiveDot(1)
+        tvContent = view.findViewById(R.id.captionText)
+        tvHeading = view.findViewById(R.id.headingText)
+        infText = resources.getStringArray(R.array.inf_text)
+        infHeading = resources.getStringArray(R.array.inf_heading)
+        setActiveDot(0)
     }
 
     fun setActiveDot(position: Int) {
@@ -45,11 +53,22 @@ class StarInformationFragment : Fragment() {
         }
     }
 
+    fun setActiveContent(position: Int) {
+        if (position in infHeading.indices && position in infText.indices) {
+            // Обновляем заголовок и текст
+            tvHeading.text = infHeading[position]
+            tvContent.text = infText[position]
+            // Обновляем точки
+            setActiveDot(position)
+        }
+    }
+
     fun setupWithViewPager(viewPager: ViewPager2) {
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 setActiveDot(position)
             }
         })
+        setActiveContent(viewPager.currentItem)
     }
 }
