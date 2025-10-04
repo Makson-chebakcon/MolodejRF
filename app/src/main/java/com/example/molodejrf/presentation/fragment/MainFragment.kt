@@ -10,8 +10,10 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
 import com.example.molodejrf.R
+import com.example.molodejrf.TestDataFriends
 
 import com.example.molodejrf.databinding.FragmentMainBinding
+import com.example.molodejrf.presentation.components.friends.FriendAdapter
 import com.google.android.material.appbar.MaterialToolbar
 
 
@@ -45,6 +47,14 @@ class MainFragment : Fragment() {
 
         val avatar = binding.materialToolbar.findViewById<ImageView>(R.id.profileAvatar)
         avatar?.load("https://i.pravatar.cc/150?img=1")
+
+        val adapter = FriendAdapter(
+            items = TestDataFriends().testFriends,
+            onItemClick = {}
+        )
+
+        binding.mainFriendRecyclerView.adapter = adapter
+
 
 
 

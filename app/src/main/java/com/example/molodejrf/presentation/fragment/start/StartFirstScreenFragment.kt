@@ -35,7 +35,7 @@ class StartFirstScreenFragment : Fragment(R.layout.fragment_start_first_screen) 
                 )
             }
 
-            firstScreenButtonAddNewUser.setOnClickListener {
+            buttonNotMeAcount.setOnClickListener {
                 findNavController().navigate(
                     R.id.action_startFirstScreenFragment_to_startRegistrationFragment4
                 )

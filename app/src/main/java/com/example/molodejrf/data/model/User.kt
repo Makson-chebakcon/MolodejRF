@@ -1,4 +1,10 @@
-package com.example.molodejrf.data.model;
+package com.example.molodejrf.data.model
 
-public class User {
-}
+data class User(
+    val id: String,
+    val firstName: String,
+    val lastName: String,
+    val email: String,
+    val avatarBase64: String,
+    val projects: List<Project>
+)

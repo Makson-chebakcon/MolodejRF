@@ -58,7 +58,7 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <ImageButton
-            android:id="@+id/button2"
+            android:id="@+id/buttonNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -72,7 +72,7 @@
 
         <!-- Третья кнопка справа -->
         <ImageButton
-            android:id="@+id/button3"
+            android:id="@+id/buttonCancelAuth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -80,7 +80,7 @@
             android:contentDescription="Кнопка 3"
             android:src="@drawable/vouchers"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintEnd_toStartOf="@+id/buttonNext"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck" />
 

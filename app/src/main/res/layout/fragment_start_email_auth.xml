@@ -56,14 +56,14 @@
             android:paddingBottom="60dp">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/buttonNext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/dark_blue"
                 android:text="Дальше" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/buttonCancelAuth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/dark_blue"

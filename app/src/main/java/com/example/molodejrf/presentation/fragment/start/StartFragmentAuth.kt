@@ -5,15 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.molodejrf.R
+import com.example.molodejrf.databinding.FragmentStartAuthBinding
 
 
 class StartFragmentAuth : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    private var _binding: FragmentStartAuthBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,5 +23,19 @@ class StartFragmentAuth : Fragment() {
         return inflater.inflate(R.layout.fragment_start_auth, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        binding.buttonNotMeAcount.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_startFragmentAuth3_to_mainFragment
+            )
+        }
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }
